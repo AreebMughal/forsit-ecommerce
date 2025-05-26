@@ -1,4 +1,4 @@
-export enum ProductCategory {
+export enum PRODUCT_CATEGORY {
   ELECTRONICS = 'electronics',
   CLOTHING = 'clothing',
   HOME = 'home',
@@ -9,7 +9,7 @@ export enum ProductCategory {
   AUTOMOTIVE = 'automotive'
 }
 
-export enum Platform {
+export enum PLATFORM {
   AMAZON = 'amazon',
   WALMART = 'walmart'
 }

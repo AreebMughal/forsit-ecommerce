@@ -1,4 +1,4 @@
-import { Platform, ProductCategory } from 'src/constants/product.enum';
+import { PLATFORM, PRODUCT_CATEGORY } from 'src/constants/product.enum';
 import { Column, CreateDateColumn, Entity, Index, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 import { Inventory } from './inventory.entity';
 import { Sale } from './sale.entity';
@@ -22,9 +22,9 @@ export class Product {
 
   @Column({
     type: 'enum',
-    enum: ProductCategory
+    enum: PRODUCT_CATEGORY
   })
-  category: ProductCategory;
+  category: PRODUCT_CATEGORY;
 
   @Column('decimal', { precision: 10, scale: 2 })
   price: number;
@@ -34,9 +34,9 @@ export class Product {
 
   @Column({
     type: 'enum',
-    enum: Platform
+    enum: PLATFORM
   })
-  platform: Platform;
+  platform: PLATFORM;
 
   @Column({ default: true })
   isActive: boolean;
