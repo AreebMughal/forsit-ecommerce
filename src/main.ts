@@ -8,11 +8,10 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   // Swagger configuration
-  const config = new DocumentBuilder()
-    .setTitle('Sada khata - API Documentation')
-    .setDescription('API description')
+   const config = new DocumentBuilder()
+    .setTitle('E-commerce Admin Dashboard API')
+    .setDescription('API for managing e-commerce sales, inventory, and analytics')
     .setVersion('1.0')
-    .addBearerAuth()
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
@@ -27,6 +26,7 @@ async function bootstrap() {
   await app.listen(port);
 
   console.info(`Server is running on http://localhost:${port}`);
+  console.log('Swagger documentation: http://localhost:3000/api');
 }
 
 bootstrap();
